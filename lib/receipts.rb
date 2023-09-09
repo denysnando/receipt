@@ -1,6 +1,6 @@
-require "receipts/version"
-require "receipts/railtie"
+require 'pry'
+
+Dir[File.join('./lib/**/*.rb')].sort.each { |f| require f }
 
 module Receipts
-  # Your code goes here...
 end
