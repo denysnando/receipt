@@ -2,6 +2,8 @@
 
 This project demonstrates a text-based command system to generate a receipt implemented in Ruby. It includes two classes, `Base` and `Main`, within the `Command` module, which allow users to select and execute commands from a menu of options.
 
+Requirements based on these [challenges](https://gist.github.com/safplatform/792314da6b54346594432f30d5868f36)
+
 ## Features
 
 - Displays a menu of options to the user.
