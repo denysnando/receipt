@@ -19,7 +19,7 @@ class Product
   end
 
   def tax_free?
-    name.downcase.match?(/(book|pills|chocolate)/)
+    name.downcase.match?(/(book|books|pills|chocolate|chocolates)/)
   end
 
   def tax

@@ -1,10 +1,11 @@
 class Receipt
-  def initialize
-    @products = []
+  def initialize(products: [], product: nil)
+    @products = products
+    @product = product
   end
 
-  def add_product(product)
-    @products << product if product.valid?
+  def add_product
+    @products << @product if @product.valid?
   end
 
   def generate_receipt
