@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'receipts'
+
+begin
+  Command::Main.new.run
+rescue Interrupt
+  puts ''
+  exit
+end
