@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'receipts'
+
+begin
+  input_text = "2 book at 12.49\n1 music CD at 14.99\n3 chocolate bar at 0.85"
+  ReceiptGenerator.generate_receipt_from_text(input_text)
+rescue Interrupt
+  puts ''
+  exit
+end
