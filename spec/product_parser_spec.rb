@@ -6,9 +6,8 @@ RSpec.describe ProductParser do
       it 'should create and add a product to the receipt' do
         parser = ProductParser.new('2 book at 12.49')
         result = parser.parse
-        expect(result).to be_a(Array)
-        expect(result.length).to eq(1)
-        expect(result.first).to be_a(Product)
+
+        expect(result).to be_a(Product)
       end
     end
 
@@ -47,7 +46,7 @@ RSpec.describe ProductParser do
       parser = ProductParser.new('')
       product = Product.new(amount: 2, name: 'book', price: 12.49)
 
-      expect(parser.send(:add_product_to_receipt, product)).to include(product)
+      expect(parser.send(:add_product_to_receipt, product)).to eq(product)
     end
   end
 end

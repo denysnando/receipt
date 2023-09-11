@@ -8,14 +8,15 @@ RSpec.describe Receipt do
       product = double('Product', valid?: true)
       new_receipt = Receipt.new(product: product)
 
-      expect { new_receipt.add_product }.to change { new_receipt.instance_variable_get(:@products).count }.by(1)
+      expect(new_receipt.add_product).to eq(product)
     end
 
     it 'does not add an invalid product to the receipt' do
       product = double('Product', valid?: false)
 
       new_receipt = Receipt.new(product: product)
-      expect { new_receipt.add_product }.not_to(change { new_receipt.instance_variable_get(:@products).count })
+
+      expect(new_receipt.add_product).to be_nil
     end
   end
 

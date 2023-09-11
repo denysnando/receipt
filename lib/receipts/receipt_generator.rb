@@ -8,7 +8,7 @@ class ReceiptGenerator
       products << generate_receipt_from_line_text(line)
     end
 
-    receipt = Receipt.new(products: products.flatten).generate_receipt
+    receipt = Receipt.new(products: products).generate_receipt
   end
 
 

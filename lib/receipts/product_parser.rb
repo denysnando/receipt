@@ -19,7 +19,7 @@ class ProductParser
   private
 
   def parse_text
-    match = text.match(/(\d+)\s(.+)\sat\s(\d+\.\d+)/)
+    match = text.match(/(\d+)\s(.+)\sat\s(\d+\.\d{1,2}+)/)
     if match
       [match[1].to_i, match[2], match[3].to_f]
     else
