@@ -16,6 +16,7 @@ Requirements based on these [challenges](https://gist.github.com/safplatform/792
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Tests](#Tests)
 
 ## Requirements
 
@@ -39,6 +40,11 @@ Before running the project, make sure you have the following:
 ## Usage
   ```bash
     ./bin/shop
+  ```
+
+## Tests
+  ```bash
+    rspec
   ```
 
 ## How can it be improved?
