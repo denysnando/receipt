@@ -11,7 +11,7 @@ module Command
         command = gets.chomp.strip
 
         exit if command.match?(/exit/i)
-        raise Exceptions::CommandNotFound unless options.key?(command.to_sym)
+        raise NotImplementedError, 'Invalid option' unless options.key?(command.to_sym)
         send(options[command.to_sym][:method])
 
         puts "----------------- \n"
