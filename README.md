@@ -50,3 +50,4 @@ Before running the project, make sure you have the following:
 ## How can it be improved?
 - By adding a validation system inside the models;
 - Add the simple coverage gem
+- Implement new exceptions and errors
